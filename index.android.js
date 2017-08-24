@@ -4,7 +4,10 @@
  * @flow
  */
 
-import { AppRegistry } from 'react-native';
-import OnePieceApp from './app/app'
+import React from 'react';
+import {
+  AppRegistry
+} from 'react-native';
+import { OnePieceApp } from './app/app';
 
 AppRegistry.registerComponent('OnePieceApp', () => OnePieceApp);

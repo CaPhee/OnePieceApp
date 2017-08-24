@@ -1,35 +1,15 @@
-import React, { Component } from 'react';
-import {
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+import React, { Component } from "react";
+import { Text,View,Button } from 'react-native';
 
-export default class OnePieceApp extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>View App</Text>
-      </View>
-    );
-  }
-}
+import { StackNavigator } from 'react-navigation';
+import  Profile  from './components/profile/profile';
+import HomeScreenNavigator from './components/home/home';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+HomeScreenNavigator.navigationOptions = {
+  title: 'One Piece Room',
+};
+
+export const OnePieceApp = StackNavigator({
+  Home: { screen: HomeScreenNavigator },
+  Profile: { screen: Profile },
 });
